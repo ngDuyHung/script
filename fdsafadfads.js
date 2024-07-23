@@ -2,7 +2,7 @@
 
 async function checkDomainAllowed(currentUrl) {
     try {
-        const response = await fetch('https://nencer.netlify.app/allowed_domains.json?v=' + new Date().getTime());
+        const response = await fetch('https://ngduyhung.github.io/script/allowed_domains.json?v=' + new Date().getTime());
         const data = await response.json();
         const allowedDomains = data.allowed_domains;
 
