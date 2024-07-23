@@ -1,2 +1,5 @@
 /allowed_domains.json
   Access-Control-Allow-Origin: *
+
+/image_urls.json
+  Access-Control-Allow-Origin: *
