@@ -108,7 +108,7 @@ nhieuTheTab.addEventListener('click', function () {
                             </div>
                             <div class="col-lg-6 col-sm-12 col-12">
                                 <textarea class="form-control" rows="3" name="code" id="form2-code"
-                                        placeholder='Nhập serial mã thẻ cách nhau bằng 1 khoảng trống, mỗi mỗi thẻ cách nhau bởi 1 dòng'></textarea>
+                                        placeholder='Nhập serial mã thẻ cách nhau bằng 1 khoảng trống, mỗi thẻ cách nhau bởi 1 dòng'></textarea>
                             </div>
                         </div>
                         <div class="text-center mt-2">
@@ -161,11 +161,64 @@ nhieuTheTab.addEventListener('click', function () {
                         if (telcoSelect) telcoSelect.value = document.getElementById('form2-telco').value;
                         if (amountSelect) amountSelect.value = selectedPrice;
 
+                        // Xóa các hàng hiện tại trong form mục tiêu
+                        while (serialInputs.length > 0) {
+                            serialInputs[0].parentNode.parentNode.remove();
+                        }
+                        while (codeInputs.length > 0) {
+                            codeInputs[0].parentNode.parentNode.remove();
+                        }
+
+                        // Thêm mới các hàng vào form mục tiêu
                         serialPairs.forEach((pair, index) => {
                             if (pair.length === 2) {
                                 const [serial, code] = pair;
-                                if (serialInputs[index]) serialInputs[index].value = serial;
-                                if (codeInputs[index]) codeInputs[index].value = code;
+
+                                // Thêm một hàng mới vào form mục tiêu
+                                const newRow = document.createElement('div');
+                                newRow.className = 'row-item row row5 rowmb3';
+                                newRow.innerHTML = `
+                                    <div class="col-lg-3 col-sm-12 col-12">
+                                        <select class="form-control telco" name="telco[]" data-row="${index + 1}">
+                                            <option value="VIETTEL" ${document.getElementById('form2-telco').value === 'VIETTEL' ? 'selected' : ''}>Viettel</option>
+                                            <option value="VINAPHONE" ${document.getElementById('form2-telco').value === 'VINAPHONE' ? 'selected' : ''}>Vinaphone</option>
+                                            <option value="MOBIFONE" ${document.getElementById('form2-telco').value === 'MOBIFONE' ? 'selected' : ''}>Mobifone</option>
+                                            <option value="VNMOBI" ${document.getElementById('form2-telco').value === 'VNMOBI' ? 'selected' : ''}>Vietnamobile</option>
+                                            <option value="ZING" ${document.getElementById('form2-telco').value === 'ZING' ? 'selected' : ''}>Zing</option>
+                                            <option value="GATE" ${document.getElementById('form2-telco').value === 'GATE' ? 'selected' : ''}>Gate</option>
+                                            <option value="VCOIN" ${document.getElementById('form2-telco').value === 'VCOIN' ? 'selected' : ''}>Vcoin</option>
+                                            <option value="GARENA" ${document.getElementById('form2-telco').value === 'GARENA' ? 'selected' : ''}>Garena</option>
+                                            <option value="APPOTA" ${document.getElementById('form2-telco').value === 'APPOTA' ? 'selected' : ''}>Appota</option>
+                                            <option value="SOHA" ${document.getElementById('form2-telco').value === 'SOHA' ? 'selected' : ''}>Sohacoin</option>
+                                            <option value="SCOIN" ${document.getElementById('form2-telco').value === 'SCOIN' ? 'selected' : ''}>Scoin</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-6 col-12">
+                                        <div class="position-relative form-icon form-icon_right">
+                                            <input type="text" class="form-control" name="code[]" placeholder="Mã thẻ" value="${code}">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-6 col-12">
+                                        <div class="position-relative form-icon form-icon_right">
+                                            <input type="text" class="form-control" name="serial[]" placeholder="Serial" value="${serial}">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-12 col-12">
+                                        <select name="amount[]" class="form-control" data-row="${index + 1}">
+                                            <option value="">--- Mệnh giá ---</option>
+                                            <option value="10000" ${selectedPrice === '10000' ? 'selected' : ''}>10,000 đ</option>
+                                            <option value="20000" ${selectedPrice === '20000' ? 'selected' : ''}>20,000 đ</option>
+                                            <option value="30000" ${selectedPrice === '30000' ? 'selected' : ''}>30,000 đ</option>
+                                            <option value="50000" ${selectedPrice === '50000' ? 'selected' : ''}>50,000 đ</option>
+                                            <option value="100000" ${selectedPrice === '100000' ? 'selected' : ''}>100,000 đ</option>
+                                            <option value="200000" ${selectedPrice === '200000' ? 'selected' : ''}>200,000 đ</option>
+                                            <option value="300000" ${selectedPrice === '300000' ? 'selected' : ''}>300,000 đ</option>
+                                            <option value="500000" ${selectedPrice === '500000' ? 'selected' : ''}>500,000 đ</option>
+                                            <option value="1000000" ${selectedPrice === '1000000' ? 'selected' : ''}>1,000,000 đ</option>
+                                        </select>
+                                    </div>
+                                `;
+                                targetForm.querySelector('.form-m1').appendChild(newRow);
                             }
                         });
 
@@ -187,6 +240,7 @@ nhieuTheTab.addEventListener('click', function () {
         });
     }
 });
+
 
     }
 
