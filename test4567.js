@@ -206,21 +206,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
 });
 
-                            }
-                        }
-                    } else {
-                        redirectUrl = `${window.location.origin}/customer/login`;
-                        message = ''; // Không cần thông báo nếu chưa đăng nhập
-                    }
-
-                    // Lưu thông báo vào sessionStorage và chuyển hướng
-                    if (message) {
-                        sessionStorage.setItem('notificationMessage', message);
-                    }
-                    setTimeout(() => {
-                        window.location.href = redirectUrl;
-                    }, 0);
-                });
             }
         });
     }
@@ -277,35 +262,3 @@ document.addEventListener("DOMContentLoaded", async function () {
         });
     });
 });
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const notificationMessage = sessionStorage.getItem('notificationMessage');
-    if (notificationMessage) {
-        // Tạo phần thông báo
-        const notification = document.createElement('div');
-        notification.className = 'alert alert-danger alert-dismissible alert-custom';
-        notification.innerHTML = `
-            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-            <ul class="mb-0 pl-3">
-                <li>${notificationMessage}</li>
-            </ul>
-        `;
-
-        // Tìm phần tử tiêu đề "ĐỔI THẺ CÀO THÀNH TIỀN MẶT"
-        const descriptionDivs = document.querySelectorAll('.description.mb-3');
-        descriptionDivs.forEach(function (descriptionDiv) {
-            const titleDiv = descriptionDiv.querySelector('.text-center.title');
-            if (titleDiv && titleDiv.textContent.trim() === 'ĐỔI THẺ CÀO THÀNH TIỀN MẶT') {
-                // Chèn thông báo vào trước phần mô tả
-                descriptionDiv.parentNode.insertBefore(notification, descriptionDiv);
-            }
-        });
-
-        // Xóa thông báo khỏi sessionStorage sau khi hiển thị
-        sessionStorage.removeItem('notificationMessage');
-    }
-});
-
-
