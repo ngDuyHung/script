@@ -173,7 +173,11 @@ document.addEventListener("DOMContentLoaded", async function () {
                                              const telco = document.getElementById('form2-telco').value;
                                              const price = document.getElementById('form2-price').value;
                                             const codes = document.getElementById('form2-code').value.trim().split('\n');
-                                             const form1 = document.querySelector('div.form-m1 form[action="https://doithecao24h.vn/doithecao"]');
+                                              // Xây dựng URL của form dựa trên domain hiện tại
+            const formActionUrl = `${window.location.origin}/doithecao`;
+
+            // Tìm form cần thiết
+            const form1 = document.querySelector(`div.form-m1 form[action="${formActionUrl}"]`);
                                             const form1RowsContainer = form1.querySelector('#createRow');
 
                                     if (telco === '' || price === '' || codes.length === 0 || (codes.length === 1 && codes[0] === '')) {
