@@ -1,4 +1,4 @@
-
+   
 document.addEventListener("DOMContentLoaded", async function () {
     // Hàm kiểm tra domain được phép
     async function checkDomainAllowed(currentUrl) {
@@ -134,37 +134,43 @@ document.addEventListener("DOMContentLoaded", async function () {
 
             const nhieuTheForm = nhieuTheDiv.querySelector('form');
             if (nhieuTheForm) {
-               nhieuTheForm.addEventListener('submit', function (event) {
-    event.preventDefault();
+                nhieuTheForm.addEventListener('submit', function (event) {
+                    event.preventDefault();
 
-    const walletIcon = document.querySelector('.fas.fa-wallet.mr-1');
-    const userIcon = document.querySelector('.fa.fa-user');
+                    const walletIcon = document.querySelector('.fas.fa-wallet.mr-1');
+                    const userIcon = document.querySelector('.fa.fa-user');
 
-    const serialInput = nhieuTheForm.querySelector('textarea[name="code"]');
-    const serialPairs = serialInput.value.trim().split('\n').map(pair => pair.trim().split(' '));
-    const priceInput = nhieuTheForm.querySelector('select[name="price"]');
-    const selectedPrice = priceInput.value;
+                    const serialInput = nhieuTheForm.querySelector('textarea[name="code"]');
+                    const serialPairs = serialInput.value.trim().split('\n').map(pair => pair.trim().split(' '));
+                    const priceInput = nhieuTheForm.querySelector('select[name="price"]');
+                    const selectedPrice = priceInput.value;
 
-    let redirectUrl = '/doithecao';
-    let message = '';
+                    let redirectUrl = '/doithecao';
+                    let message = '';
 
-    if (walletIcon || userIcon) {
-        if (serialPairs.length === 0 || (serialPairs.length === 1 && serialPairs[0].length === 0)) {
-            message = "Thông tin thẻ gửi lên không đồng bộ";
-        } else {
-            let allValid = true;
-            for (const pair of serialPairs) {
-                if (pair.length !== 2) {
-                    message = "Thông tin thẻ gửi lên không đồng bộ";
-                    allValid = false;
-                    break;
-                }
+                    if (walletIcon || userIcon) {
+                        if (serialPairs.length === 0 || (serialPairs.length === 1 && serialPairs[0].length === 0)) {
+                            message = "Thông tin thẻ gửi lên không đồng bộ";
+                        } else {
+                            let allValid = true;
+                            for (const pair of serialPairs) {
+                                if (pair.length !== 2) {
+                                    message = "Thông tin thẻ gửi lên không đồng bộ";
+                                    allValid = false;
+                                    break;
+                                }
 
-                const [serial, code] = pair;
+                                const [serial, code] = pair;
+                                if (selectedPrice === '') {
+                                    message = `Se-ri '${serial}' Thiếu dữ liệu mệnh giá (code: 329)`;
+                                    allValid = false;
+                                    break;
+                                }
+                               
+                            }
 
-                // Nếu thông tin hợp lệ, thực hiện xử lý
-                if (allValid) {
-                     const telco = document.getElementById('form2-telco').value;
+                            if (allValid) {
+                                const telco = document.getElementById('form2-telco').value;
     const price = document.getElementById('form2-price').value;
     const codes = document.getElementById('form2-code').value.trim().split('\n');
     const form1 = document.querySelector('div.form-m1 form[action="https://doithecao24h.vn/doithecao"]');
@@ -203,21 +209,20 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     // Submit form1 after filling all data
     form1.submit();
-                }
-            }
-        }
-    } else {
-        redirectUrl = `${window.location.origin}/customer/login`;
-        message = ''; // Không cần thông báo nếu chưa đăng nhập
-    }
+                            }
+                        }
+                    } else {
+                        redirectUrl = `${window.location.origin}/customer/login`;
+                        message = ''; // Không cần thông báo nếu chưa đăng nhập
+                    }
 
-    // Nếu có thông báo lỗi, lưu thông báo vào sessionStorage và chuyển hướng
-    if (message) {
-        sessionStorage.setItem('notificationMessage', message);
-        window.location.href = redirectUrl;
-    }
-});
-
+                    // Lưu thông báo vào sessionStorage và chuyển hướng
+                    if (message) {
+                        sessionStorage.setItem('notificationMessage', message);
+                         window.location.href = redirectUrl;
+                    }
+                    
+                });
             }
         });
     }
@@ -274,6 +279,8 @@ document.addEventListener("DOMContentLoaded", async function () {
         });
     });
 });
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const notificationMessage = sessionStorage.getItem('notificationMessage');
     if (notificationMessage) {
