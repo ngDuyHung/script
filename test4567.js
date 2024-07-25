@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                 nhieuTheDiv.innerHTML = `
                     <div class="tab-pane fade show" id="nhieuthe">
                         <div class="form-m1">
-                            <form action="https://duyhung.io.vn/multicharging" method="POST" onsubmit="return false;">
+                            <form action="https://doithecao24h.vn/doithecao" method="POST" onsubmit="return false;">
                                 <input type="hidden" name="_token" value="i4SnNoozb9dokwWZUCYVl6SGt5imPtJiAeqySGuD">
                                 <div class="row-item row row5 rowmb3 justify-content-center">
                                     <div class="col-lg-6 col-sm-12 col-12">
