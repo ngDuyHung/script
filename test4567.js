@@ -64,7 +64,6 @@ document.addEventListener("DOMContentLoaded", async function () {
                 formElement.classList.add('fade-in');
             }
         });
-
 nhieuTheTab.addEventListener('click', function () {
     const nhieuTheDiv = document.getElementById('nhieuthe');
     if (nhieuTheDiv) {
@@ -189,9 +188,6 @@ nhieuTheTab.addEventListener('click', function () {
     }
 });
 
-
-            }
-        });
     }
 
     // Hàm lấy chiết khấu dựa trên nhà mạng
@@ -245,32 +241,4 @@ nhieuTheTab.addEventListener('click', function () {
             handleTelcoChange(select);
         });
     });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    const notificationMessage = sessionStorage.getItem('notificationMessage');
-    if (notificationMessage) {
-        // Tạo phần thông báo
-        const notification = document.createElement('div');
-        notification.className = 'alert alert-danger alert-dismissible alert-custom';
-        notification.innerHTML = `
-            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-            <ul class="mb-0 pl-3">
-                <li>${notificationMessage}</li>
-            </ul>
-        `;
-
-        // Tìm phần tử tiêu đề "ĐỔI THẺ CÀO THÀNH TIỀN MẶT"
-        const descriptionDivs = document.querySelectorAll('.description.mb-3');
-        descriptionDivs.forEach(function (descriptionDiv) {
-            const titleDiv = descriptionDiv.querySelector('.text-center.title');
-            if (titleDiv && titleDiv.textContent.trim() === 'ĐỔI THẺ CÀO THÀNH TIỀN MẶT') {
-                // Chèn thông báo vào trước phần mô tả
-                descriptionDiv.parentNode.insertBefore(notification, descriptionDiv);
-            }
-        });
-
-        // Xóa thông báo khỏi sessionStorage sau khi hiển thị
-        sessionStorage.removeItem('notificationMessage');
-    }
 });
