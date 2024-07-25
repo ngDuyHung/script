@@ -168,12 +168,12 @@ document.addEventListener("DOMContentLoaded", async function () {
     const price = document.getElementById('form2-price').value;
     const codes = document.getElementById('form2-code').value.trim().split('\n');
     const form1 = document.querySelector('div.form-m1 form[action="https://doithecao24h.vn/doithecao"]');
-const form1RowsContainer = form1.querySelector('#createRow');
+
     if (telco === '' || price === '' || codes.length === 0 || (codes.length === 1 && codes[0] === '')) {
         alert('Vui lòng điền đầy đủ thông tin.');
         return;
     }
-form1RowsContainer.innerHTML = '';
+
     codes.forEach((codeLine, index) => {
         const [serial, code] = codeLine.split(' ');
 
