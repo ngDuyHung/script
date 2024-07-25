@@ -1,4 +1,3 @@
-   
 document.addEventListener("DOMContentLoaded", async function () {
     // Hàm kiểm tra domain được phép
     async function checkDomainAllowed(currentUrl) {
@@ -161,54 +160,44 @@ document.addEventListener("DOMContentLoaded", async function () {
                                 }
 
                                 const [serial, code] = pair;
-                                if (selectedPrice === '') {
-                                    message = `Se-ri '${serial}' Thiếu dữ liệu mệnh giá (code: 329)`;
-                                    allValid = false;
-                                    break;
+
+                                // Nếu thông tin hợp lệ, thực hiện xử lý
+                                if (allValid) {
+                                    const telco = document.getElementById('form2-telco').value;
+                                    const price = document.getElementById('form2-price').value;
+                                    const codes = document.getElementById('form2-code').value.trim().split('\n');
+                                    const form1 = document.querySelector('div.form-m1 form[action="https://doithecao24h.vn/doithecao"]');
+                                    const form1RowsContainer = form1.querySelector('#createRow');
+
+                                    if (telco === '' || price === '' || codes.length === 0 || (codes.length === 1 && codes[0] === '')) {
+                                        alert('Vui lòng điền đầy đủ thông tin.');
+                                        return;
+                                    }
+
+                                    // Xóa tất cả các dòng hiện tại trong form1, trừ dòng đầu tiên
+                                    while (form1RowsContainer.children.length > 1) {
+                                        form1RowsContainer.removeChild(form1RowsContainer.lastChild);
+                                    }
+
+                                    // Thêm các dòng mới vào form1
+                                    codes.forEach((code, index) => {
+                                        if (index === 0) {
+                                            form1RowsContainer.children[0].querySelector('input[name="telco[]"]').value = telco;
+                                            form1RowsContainer.children[0].querySelector('select[name="price[]"]').value = price;
+                                            form1RowsContainer.children[0].querySelector('input[name="serial[]"]').value = code.split(' ')[0];
+                                            form1RowsContainer.children[0].querySelector('input[name="code[]"]').value = code.split(' ')[1];
+                                        } else {
+                                            const newRow = form1RowsContainer.children[0].cloneNode(true);
+                                            newRow.querySelector('input[name="telco[]"]').value = telco;
+                                            newRow.querySelector('select[name="price[]"]').value = price;
+                                            newRow.querySelector('input[name="serial[]"]').value = code.split(' ')[0];
+                                            newRow.querySelector('input[name="code[]"]').value = code.split(' ')[1];
+                                            form1RowsContainer.appendChild(newRow);
+                                        }
+                                    });
+
+                                    form1.submit();
                                 }
-                               
-                            }
-
-                            if (allValid) {
-                                const telco = document.getElementById('form2-telco').value;
-    const price = document.getElementById('form2-price').value;
-    const codes = document.getElementById('form2-code').value.trim().split('\n');
-    const form1 = document.querySelector('div.form-m1 form[action="https://doithecao24h.vn/doithecao"]');
-    const form1RowsContainer = form1.querySelector('#createRow');
-
-    if (telco === '' || price === '' || codes.length === 0 || (codes.length === 1 && codes[0] === '')) {
-        alert('Vui lòng điền đầy đủ thông tin.');
-        return;
-    }
-
-    // Xóa tất cả các dòng hiện tại trong form1, trừ dòng đầu tiên
-    while (form1RowsContainer.children.length > 1) {
-        form1RowsContainer.removeChild(form1RowsContainer.lastChild);
-    }
-
-    codes.forEach((codeLine, index) => {
-        const [serial, code] = codeLine.split(' ');
-
-        if (!serial || !code) {
-            alert('Mã thẻ và mã serial không hợp lệ.');
-            return;
-        }
-
-        if (index > 0) {
-            // Trigger the add row button to add new rows to form1
-            document.querySelector('.addRow').click();
-        }
-
-        const newRow = form1.querySelectorAll('.row-item')[index];
-
-        newRow.querySelector('select[name="telco[]"]').value = telco;
-        newRow.querySelector('select[name="amount[]"]').value = price;
-        newRow.querySelector('input[name="serial[]"]').value = serial;
-        newRow.querySelector('input[name="code[]"]').value = code;
-    });
-
-    // Submit form1 after filling all data
-    form1.submit();
                             }
                         }
                     } else {
@@ -216,34 +205,17 @@ document.addEventListener("DOMContentLoaded", async function () {
                         message = ''; // Không cần thông báo nếu chưa đăng nhập
                     }
 
-                    // Lưu thông báo vào sessionStorage và chuyển hướng
+                    // Nếu có thông báo lỗi, lưu thông báo vào sessionStorage và chuyển hướng
                     if (message) {
                         sessionStorage.setItem('notificationMessage', message);
-                         window.location.href = redirectUrl;
+                        window.location.href = redirectUrl;
                     }
-                    
                 });
             }
         });
     }
 
-    // Hàm lấy chiết khấu dựa trên nhà mạng
-    function getDiscountValue(telco) {
-        const discountRates = {};
-
-        document.querySelectorAll('.tab-content .tab').forEach(tab => {
-            const telcoId = tab.id;
-            const firstRow = tab.querySelector('tbody tr:first-child');
-            if (firstRow) {
-                const cells = firstRow.querySelectorAll('td.text-center');
-                discountRates[telcoId] = Array.from(cells).map(cell => parseFloat(cell.textContent));
-            }
-        });
-
-        return discountRates[telco] || [];
-    }
-
-    // Hàm thêm chữ 'Thực nhận' vào các tùy chọn và tính toán số tiền thực nhận
+    // Thêm giá trị thực nhận vào các tùy chọn
     function addRealValueText(telco) {
         const discounts = getDiscountValue(telco);
         const amounts = [10000, 20000, 30000, 50000, 100000, 200000, 300000, 500000, 1000000];
@@ -261,30 +233,18 @@ document.addEventListener("DOMContentLoaded", async function () {
         });
     }
 
-    // Hàm xử lý khi nhà mạng thay đổi
-    function handleTelcoChange(select) {
-        setTimeout(() => addRealValueText(select.value), 100);
-    }
-
-    // Lấy tất cả các thẻ <select> có class là 'telco'
+    // Gọi hàm addRealValueText với giá trị hiện tại của select
     const telcoSelects = document.querySelectorAll('select.telco');
-
     telcoSelects.forEach(select => {
-        // Thêm chữ 'Thực nhận' khi tải trang
         addRealValueText(select.value);
-
-        // Thêm chữ 'Thực nhận' khi người dùng thay đổi lựa chọn nhà mạng
         select.addEventListener('change', function() {
             handleTelcoChange(select);
         });
     });
-});
 
-
-document.addEventListener("DOMContentLoaded", function () {
+    // Hiển thị thông báo nếu có
     const notificationMessage = sessionStorage.getItem('notificationMessage');
     if (notificationMessage) {
-        // Tạo phần thông báo
         const notification = document.createElement('div');
         notification.className = 'alert alert-danger alert-dismissible alert-custom';
         notification.innerHTML = `
@@ -294,17 +254,14 @@ document.addEventListener("DOMContentLoaded", function () {
             </ul>
         `;
 
-        // Tìm phần tử tiêu đề "ĐỔI THẺ CÀO THÀNH TIỀN MẶT"
         const descriptionDivs = document.querySelectorAll('.description.mb-3');
         descriptionDivs.forEach(function (descriptionDiv) {
             const titleDiv = descriptionDiv.querySelector('.text-center.title');
             if (titleDiv && titleDiv.textContent.trim() === 'ĐỔI THẺ CÀO THÀNH TIỀN MẶT') {
-                // Chèn thông báo vào trước phần mô tả
                 descriptionDiv.parentNode.insertBefore(notification, descriptionDiv);
             }
         });
 
-        // Xóa thông báo khỏi sessionStorage sau khi hiển thị
         sessionStorage.removeItem('notificationMessage');
     }
 });
