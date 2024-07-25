@@ -164,14 +164,20 @@ document.addEventListener("DOMContentLoaded", async function () {
 
                 // Nếu thông tin hợp lệ, thực hiện xử lý
                 if (allValid) {
-                    const telco = document.getElementById('form2-telco').value;
+                     const telco = document.getElementById('form2-telco').value;
     const price = document.getElementById('form2-price').value;
     const codes = document.getElementById('form2-code').value.trim().split('\n');
     const form1 = document.querySelector('div.form-m1 form[action="https://doithecao24h.vn/doithecao"]');
+    const form1RowsContainer = form1.querySelector('#createRow');
 
     if (telco === '' || price === '' || codes.length === 0 || (codes.length === 1 && codes[0] === '')) {
         alert('Vui lòng điền đầy đủ thông tin.');
         return;
+    }
+
+    // Xóa tất cả các dòng hiện tại trong form1, trừ dòng đầu tiên
+    while (form1RowsContainer.children.length > 1) {
+        form1RowsContainer.removeChild(form1RowsContainer.lastChild);
     }
 
     codes.forEach((codeLine, index) => {
@@ -183,7 +189,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
 
         if (index > 0) {
-            // Trigger the add row button to add more rows to form1
+            // Trigger the add row button to add new rows to form1
             document.querySelector('.addRow').click();
         }
 
