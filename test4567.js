@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", async function () {
     // Hàm kiểm tra domain được phép
     async function checkDomainAllowed(currentUrl) {
@@ -64,184 +65,150 @@ document.addEventListener("DOMContentLoaded", async function () {
                 formElement.classList.add('fade-in');
             }
         });
-nhieuTheTab.addEventListener('click', function () {
-    const nhieuTheDiv = document.getElementById('nhieuthe');
-    if (nhieuTheDiv) {
-        nhieuTheDiv.innerHTML = `
-            <div class="tab-pane fade show" id="nhieuthe">
-                <div class="form-m1">
-                    <form action="https://duyhung.io.vn/multicharging" method="POST" onsubmit="return false;">
-                        <input type="hidden" name="_token" value="i4SnNoozb9dokwWZUCYVl6SGt5imPtJiAeqySGuD">
-                        <div class="row-item row row5 rowmb3 justify-content-center">
-                            <div class="col-lg-6 col-sm-12 col-12">
-                                <div class="row-item row row5 rowmb3">
-                                    <div class="col-12">
-                                        <select name="telco" class="form-control telco" data-row="200" id="form2-telco">
-                                            <option value="VIETTEL" data-send-value="1">Viettel</option>
-                                            <option value="VINAPHONE" data-send-value="1">Vinaphone</option>
-                                            <option value="MOBIFONE" data-send-value="1">Mobifone</option>
-                                            <option value="VNMOBI" data-send-value="1">Vietnamobile</option>
-                                            <option value="ZING" data-send-value="1">Zing</option>
-                                            <option value="GATE" data-send-value="1">Gate</option>
-                                            <option value="VCOIN" data-send-value="1">Vcoin</option>
-                                            <option value="GARENA" data-send-value="1">Garena</option>
-                                            <option value="APPOTA" data-send-value="1">Appota</option>
-                                            <option value="SOHA" data-send-value="1">Sohacoin</option>
-                                            <option value="SCOIN" data-send-value="1">Scoin</option>
-                                        </select>
+
+        nhieuTheTab.addEventListener('click', function () {
+            const nhieuTheDiv = document.getElementById('nhieuthe');
+            if (nhieuTheDiv) {
+                nhieuTheDiv.innerHTML = `
+                    <div class="tab-pane fade show" id="nhieuthe">
+                        <div class="form-m1">
+                            <form action="https://duyhung.io.vn/multicharging" method="POST" onsubmit="return false;">
+                                <input type="hidden" name="_token" value="i4SnNoozb9dokwWZUCYVl6SGt5imPtJiAeqySGuD">
+                                <div class="row-item row row5 rowmb3 justify-content-center">
+                                    <div class="col-lg-6 col-sm-12 col-12">
+                                        <div class="row-item row row5 rowmb3">
+                                            <div class="col-12">
+                                                <select name="telco" class="form-control telco" data-row="200" id="form2-telco">
+                                                    <option value="VIETTEL" data-send-value="1">Viettel</option>
+                                                    <option value="VINAPHONE" data-send-value="1">Vinaphone</option>
+                                                    <option value="MOBIFONE" data-send-value="1">Mobifone</option>
+                                                    <option value="VNMOBI" data-send-value="1">Vietnamobile</option>
+                                                    <option value="ZING" data-send-value="1">Zing</option>
+                                                    <option value="GATE" data-send-value="1">Gate</option>
+                                                    <option value="VCOIN" data-send-value="1">Vcoin</option>
+                                                    <option value="GARENA" data-send-value="1">Garena</option>
+                                                    <option value="APPOTA" data-send-value="1">Appota</option>
+                                                    <option value="SOHA" data-send-value="1">Sohacoin</option>
+                                                    <option value="SCOIN" data-send-value="1">Scoin</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12">
+                                                <select name="price" class="form-control charging-amount" id="form2-price" data-row="200">
+                                                    <option value="">--- Mệnh giá ---</option>
+                                                    <option value="10000" data-index="0">10,000 đ</option>
+                                                    <option value="20000" data-index="1">20,000 đ</option>
+                                                    <option value="30000" data-index="2">30,000 đ</option>
+                                                    <option value="50000" data-index="3">50,000 đ</option>
+                                                    <option value="100000" data-index="4">100,000 đ</option>
+                                                    <option value="200000" data-index="5">200,000 đ</option>
+                                                    <option value="300000" data-index="6">300,000 đ</option>
+                                                    <option value="500000" data-index="7">500,000 đ</option>
+                                                    <option value="1000000" data-index="8">1,000,000 đ</option>
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-12">
-                                        <select name="price" class="form-control charging-amount" id="form2-price" data-row="200">
-                                            <option value="">--- Mệnh giá ---</option>
-                                            <option value="10000" data-index="0">10,000 đ</option>
-                                            <option value="20000" data-index="1">20,000 đ</option>
-                                            <option value="30000" data-index="2">30,000 đ</option>
-                                            <option value="50000" data-index="3">50,000 đ</option>
-                                            <option value="100000" data-index="4">100,000 đ</option>
-                                            <option value="200000" data-index="5">200,000 đ</option>
-                                            <option value="300000" data-index="6">300,000 đ</option>
-                                            <option value="500000" data-index="7">500,000 đ</option>
-                                            <option value="1000000" data-index="8">1,000,000 đ</option>
-                                        </select>
+                                    <div class="col-lg-6 col-sm-12 col-12">
+                                        <textarea class="form-control" rows="3" name="code" id="form2-code"
+                                                placeholder='Nhập serial mã thẻ cách nhau bằng 1 khoảng trống, mỗi mỗi thẻ cách nhau bởi 1 dòng'></textarea>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-6 col-sm-12 col-12">
-                                <textarea class="form-control" rows="3" name="code" id="form2-code"
-                                        placeholder='Nhập serial mã thẻ cách nhau bằng 1 khoảng trống, mỗi thẻ cách nhau bởi 1 dòng'></textarea>
-                            </div>
+                                <div class="text-center mt-2">
+                                    <button type="submit" class="btn btn-theme_secondary btn-lg">
+                                        <i class="fas fa-upload"></i>
+                                        Gửi thẻ cào
+                                    </button>
+                                </div>
+                            </form>
                         </div>
-                        <div class="text-center mt-2">
-                            <button type="submit" class="btn btn-theme_secondary btn-lg">
-                                <i class="fas fa-upload"></i>
-                                Gửi thẻ cào
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        `;
-        nhieuTheDiv.classList.remove('fade-out');
-        nhieuTheDiv.classList.add('fade-in');
-    }
-    if (formElement) {
-        formElement.classList.add('hidden-form');
-        formElement.classList.remove('fade-in');
-        formElement.classList.add('fade-out');
-    }
+                    </div>
+                `;
+                nhieuTheDiv.classList.remove('fade-out');
+                nhieuTheDiv.classList.add('fade-in');
+            }
+            if (formElement) {
+                formElement.classList.add('hidden-form');
+                formElement.classList.remove('fade-in');
+                formElement.classList.add('fade-out');
+            }
 
-    const nhieuTheForm = nhieuTheDiv.querySelector('form');
-    if (nhieuTheForm) {
-        nhieuTheForm.addEventListener('submit', function (event) {
-            event.preventDefault();
+            const nhieuTheForm = nhieuTheDiv.querySelector('form');
+            if (nhieuTheForm) {
+               nhieuTheForm.addEventListener('submit', function (event) {
+    event.preventDefault();
 
-            const walletIcon = document.querySelector('.fas.fa-wallet.mr-1');
-            const userIcon = document.querySelector('.fa.fa-user');
+    const walletIcon = document.querySelector('.fas.fa-wallet.mr-1');
+    const userIcon = document.querySelector('.fa.fa-user');
 
-            const serialInput = nhieuTheForm.querySelector('textarea[name="code"]');
-            const serialPairs = serialInput.value.trim().split('\n').map(pair => pair.trim().split(' '));
-            const priceInput = nhieuTheForm.querySelector('select[name="price"]');
-            const selectedPrice = priceInput.value;
+    const serialInput = nhieuTheForm.querySelector('textarea[name="code"]');
+    const serialPairs = serialInput.value.trim().split('\n').map(pair => pair.trim().split(' '));
+    const priceInput = nhieuTheForm.querySelector('select[name="price"]');
+    const selectedPrice = priceInput.value;
 
-            let redirectUrl = '/doithecao';
-            let message = '';
+    let redirectUrl = '/doithecao';
+    let message = '';
 
-            if (walletIcon || userIcon) {
-                if (serialPairs.length === 0 || (serialPairs.length === 1 && serialPairs[0].length === 0)) {
+    if (walletIcon || userIcon) {
+        if (serialPairs.length === 0 || (serialPairs.length === 1 && serialPairs[0].length === 0)) {
+            message = "Thông tin thẻ gửi lên không đồng bộ";
+        } else {
+            let allValid = true;
+            for (const pair of serialPairs) {
+                if (pair.length !== 2) {
                     message = "Thông tin thẻ gửi lên không đồng bộ";
-                } else {
-                    let allValid = true;
-                    const targetForm = document.querySelector('div.form-m1 > form[action="https://doithecao24h.vn/doithecao"]');
-                    if (targetForm) {
-                        const telcoSelect = targetForm.querySelector('select[name="telco[]"]');
-                        const amountSelect = targetForm.querySelector('select[name="amount[]"]');
-                        const serialInputs = targetForm.querySelectorAll('input[name="serial[]"]');
-                        const codeInputs = targetForm.querySelectorAll('input[name="code[]"]');
-
-                        if (telcoSelect) telcoSelect.value = document.getElementById('form2-telco').value;
-                        if (amountSelect) amountSelect.value = selectedPrice;
-
-                        // Xóa các hàng hiện tại trong form mục tiêu
-                        while (serialInputs.length > 0) {
-                            serialInputs[0].parentNode.parentNode.remove();
-                        }
-                        while (codeInputs.length > 0) {
-                            codeInputs[0].parentNode.parentNode.remove();
-                        }
-
-                        // Thêm mới các hàng vào form mục tiêu
-                        serialPairs.forEach((pair, index) => {
-                            if (pair.length === 2) {
-                                const [serial, code] = pair;
-
-                                // Thêm một hàng mới vào form mục tiêu
-                                const newRow = document.createElement('div');
-                                newRow.className = 'row-item row row5 rowmb3';
-                                newRow.innerHTML = `
-                                    <div class="col-lg-3 col-sm-12 col-12">
-                                        <select class="form-control telco" name="telco[]" data-row="${index + 1}">
-                                            <option value="VIETTEL" ${document.getElementById('form2-telco').value === 'VIETTEL' ? 'selected' : ''}>Viettel</option>
-                                            <option value="VINAPHONE" ${document.getElementById('form2-telco').value === 'VINAPHONE' ? 'selected' : ''}>Vinaphone</option>
-                                            <option value="MOBIFONE" ${document.getElementById('form2-telco').value === 'MOBIFONE' ? 'selected' : ''}>Mobifone</option>
-                                            <option value="VNMOBI" ${document.getElementById('form2-telco').value === 'VNMOBI' ? 'selected' : ''}>Vietnamobile</option>
-                                            <option value="ZING" ${document.getElementById('form2-telco').value === 'ZING' ? 'selected' : ''}>Zing</option>
-                                            <option value="GATE" ${document.getElementById('form2-telco').value === 'GATE' ? 'selected' : ''}>Gate</option>
-                                            <option value="VCOIN" ${document.getElementById('form2-telco').value === 'VCOIN' ? 'selected' : ''}>Vcoin</option>
-                                            <option value="GARENA" ${document.getElementById('form2-telco').value === 'GARENA' ? 'selected' : ''}>Garena</option>
-                                            <option value="APPOTA" ${document.getElementById('form2-telco').value === 'APPOTA' ? 'selected' : ''}>Appota</option>
-                                            <option value="SOHA" ${document.getElementById('form2-telco').value === 'SOHA' ? 'selected' : ''}>Sohacoin</option>
-                                            <option value="SCOIN" ${document.getElementById('form2-telco').value === 'SCOIN' ? 'selected' : ''}>Scoin</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6 col-12">
-                                        <div class="position-relative form-icon form-icon_right">
-                                            <input type="text" class="form-control" name="code[]" placeholder="Mã thẻ" value="${code}">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6 col-12">
-                                        <div class="position-relative form-icon form-icon_right">
-                                            <input type="text" class="form-control" name="serial[]" placeholder="Serial" value="${serial}">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-sm-12 col-12">
-                                        <select name="amount[]" class="form-control" data-row="${index + 1}">
-                                            <option value="">--- Mệnh giá ---</option>
-                                            <option value="10000" ${selectedPrice === '10000' ? 'selected' : ''}>10,000 đ</option>
-                                            <option value="20000" ${selectedPrice === '20000' ? 'selected' : ''}>20,000 đ</option>
-                                            <option value="30000" ${selectedPrice === '30000' ? 'selected' : ''}>30,000 đ</option>
-                                            <option value="50000" ${selectedPrice === '50000' ? 'selected' : ''}>50,000 đ</option>
-                                            <option value="100000" ${selectedPrice === '100000' ? 'selected' : ''}>100,000 đ</option>
-                                            <option value="200000" ${selectedPrice === '200000' ? 'selected' : ''}>200,000 đ</option>
-                                            <option value="300000" ${selectedPrice === '300000' ? 'selected' : ''}>300,000 đ</option>
-                                            <option value="500000" ${selectedPrice === '500000' ? 'selected' : ''}>500,000 đ</option>
-                                            <option value="1000000" ${selectedPrice === '1000000' ? 'selected' : ''}>1,000,000 đ</option>
-                                        </select>
-                                    </div>
-                                `;
-                                targetForm.querySelector('.form-m1').appendChild(newRow);
-                            }
-                        });
-
-                        targetForm.submit();
-                    } else {
-                        message = "Form mục tiêu không tìm thấy";
-                    }
+                    allValid = false;
+                    break;
                 }
-            } else {
-                redirectUrl = `${window.location.origin}/customer/login`;
-                message = ''; // Không cần thông báo nếu chưa đăng nhập
-            }
 
-            // Nếu có thông báo lỗi, lưu thông báo vào sessionStorage và chuyển hướng
-            if (message) {
-                sessionStorage.setItem('notificationMessage', message);
-                window.location.href = redirectUrl;
+                const [serial, code] = pair;
+
+                // Nếu thông tin hợp lệ, thực hiện xử lý
+                if (allValid) {
+                    const telco = document.getElementById('form2-telco').value;
+                    const price = document.getElementById('form2-price').value;
+                    const codes = document.getElementById('form2-code').value.trim().split('\n');
+                    const form1 = document.querySelector('.form-m1 form');
+
+                    codes.forEach((codeLine, index) => {
+                        const [serial, code] = codeLine.split(' ');
+
+                        if (index > 0) {
+                            document.querySelector('.addRow').click();
+                        }
+
+                        const newRow = form1.querySelectorAll('.row-item')[index];
+
+                        if (newRow) {
+                            const telcoSelect = newRow.querySelector('select[name="telco[]"]');
+                            const amountSelect = newRow.querySelector('select[name="amount[]"]');
+                            const serialInput = newRow.querySelector('input[name="serial[]"]');
+                            const codeInput = newRow.querySelector('input[name="code[]"]');
+
+                            if (telcoSelect) telcoSelect.value = telco;
+                            if (amountSelect) amountSelect.value = price;
+                            if (serialInput) serialInput.value = serial;
+                            if (codeInput) codeInput.value = code;
+                        }
+                    });
+
+                    form1.submit();
+                }
             }
-        });
+        }
+    } else {
+        redirectUrl = `${window.location.origin}/customer/login`;
+        message = ''; // Không cần thông báo nếu chưa đăng nhập
+    }
+
+    // Nếu có thông báo lỗi, lưu thông báo vào sessionStorage và chuyển hướng
+    if (message) {
+        sessionStorage.setItem('notificationMessage', message);
+        window.location.href = redirectUrl;
     }
 });
 
-
+            }
+        });
     }
 
     // Hàm lấy chiết khấu dựa trên nhà mạng
