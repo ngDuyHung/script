@@ -202,6 +202,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                         }
                     } else {
                         redirectUrl = `${window.location.origin}/customer/login`;
+                        window.location.href= redirectUrl;
                         message = ''; // Không cần thông báo nếu chưa đăng nhập
                     }
 
