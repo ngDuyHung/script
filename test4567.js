@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                     <div class="tab-pane fade show" id="nhieuthe">
                         <div class="form-m1">
                             <form action="https://doithecao24h.vn/doithecao" method="POST" onsubmit="return false;">
-                                <input type="hidden" name="_token" value="i4SnNoozb9dokwWZUCYVl6SGt5imPtJiAeqySGuD">
+                                <input type="hidden" name="_token" value="VnhdXIW2Wwh7HolawksqZP5vJZnusW12ylMJnJXq">
                                 <div class="row-item row row5 rowmb3 justify-content-center">
                                     <div class="col-lg-6 col-sm-12 col-12">
                                         <div class="row-item row row5 rowmb3">
