@@ -127,7 +127,7 @@
             }
         });
 
-        const nhieuTheForm = newFormDiv ? newFormDiv.querySelector('form') : null;
+        const nhieuTheForm = newFormDiv.querySelector('form');
         if (nhieuTheForm) {
                 nhieuTheForm.addEventListener('submit', function (event) {
                     event.preventDefault();
