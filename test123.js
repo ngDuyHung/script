@@ -209,5 +209,87 @@
                 newFormDiv = null;
             }
         });
+
+ // Hàm lấy chiết khấu dựa trên nhà mạng
+    function getDiscountValue(telco) {
+        const discountRates = {};
+
+        document.querySelectorAll('.tab-content .tab').forEach(tab => {
+            const telcoId = tab.id;
+            const firstRow = tab.querySelector('tbody tr:first-child');
+            if (firstRow) {
+                const cells = firstRow.querySelectorAll('td.text-center');
+                discountRates[telcoId] = Array.from(cells).map(cell => parseFloat(cell.textContent));
+            }
+        });
+
+        return discountRates[telco] || [];
+    }
+
+    // Hàm thêm chữ 'Thực nhận' vào các tùy chọn và tính toán số tiền thực nhận
+    function addRealValueText(telco) {
+        const discounts = getDiscountValue(telco);
+        const amounts = [10000, 20000, 30000, 50000, 100000, 200000, 300000, 500000, 1000000];
+
+        document.querySelectorAll('select.charging-amount').forEach(select => {
+            select.querySelectorAll('option').forEach((option, index) => {
+                const value = parseInt(option.value, 10);
+                if (!isNaN(value) && index < discounts.length) {
+                    const discount = discounts[index];
+                    const realValue = value - (value * discount / 100);
+                    option.textContent = `${value.toLocaleString('vi-VN')} đ - Thực nhận ${realValue.toLocaleString('vi-VN')} đ`;
+                    console.log(`Updated option: ${option.textContent}`);
+                }
+            });
+        });
+    }
+
+    // Hàm xử lý khi nhà mạng thay đổi
+    function handleTelcoChange(select) {
+        setTimeout(() => addRealValueText(select.value), 100);
+    }
+
+    // Lấy tất cả các thẻ <select> có class là 'telco'
+    const telcoSelects = document.querySelectorAll('select.telco');
+
+    telcoSelects.forEach(select => {
+        // Thêm chữ 'Thực nhận' khi tải trang
+        addRealValueText(select.value);
+
+        // Thêm chữ 'Thực nhận' khi người dùng thay đổi lựa chọn nhà mạng
+        select.addEventListener('change', function() {
+            handleTelcoChange(select);
+        });
     });
+
+
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+    const notificationMessage = sessionStorage.getItem('notificationMessage');
+    if (notificationMessage) {
+        // Tạo phần thông báo
+        const notification = document.createElement('div');
+        notification.className = 'alert alert-danger alert-dismissible alert-custom';
+        notification.innerHTML = `
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <ul class="mb-0 pl-3">
+                <li>${notificationMessage}</li>
+            </ul>
+        `;
+
+        // Tìm phần tử tiêu đề "ĐỔI THẺ CÀO THÀNH TIỀN MẶT"
+        const descriptionDivs = document.querySelectorAll('.description.mb-3');
+        descriptionDivs.forEach(function (descriptionDiv) {
+            const titleDiv = descriptionDiv.querySelector('.text-center.title');
+            if (titleDiv && titleDiv.textContent.trim() === 'ĐỔI THẺ CÀO THÀNH TIỀN MẶT') {
+                // Chèn thông báo vào trước phần mô tả
+                descriptionDiv.parentNode.insertBefore(notification, descriptionDiv);
+            }
+        });
+
+        // Xóa thông báo khỏi sessionStorage sau khi hiển thị
+        sessionStorage.removeItem('notificationMessage');
+    }
+});
+
 
