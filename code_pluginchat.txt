@@ -3,7 +3,7 @@ trang mã hóa css:
 
 <!-- Plugin chat  -->
 
-
+<link rel="stylesheet" href="pluginchat.css" />
 <div id="pluginchat-telegram-tracking" class="pluginchat-telegram-mess">
 <span id="pluginchat-telegram-tracking"> Liên hệ hỗ trợ </span>
 </div>
@@ -17,7 +17,7 @@ trang mã hóa css:
     </div>
 </div>
 
-<div id="contactOptions" class="contact-option-pluginchatt"><script src="script.js"></script>
+<div id="contactOptions" class="contact-option-pluginchatt"><script src="pluginchat.js"></script>
     <a href="#" onclick="window.open(linkZalo, '_blank')" target="_blank" class="contact-option-pluginchat">
         <img src="https://i.imgur.com/hxLmCcD.jpeg" alt="Zalo pluginchat" style="width: 15px; height: 15px; margin-right: 10px;"> Chat qua Zalo
     </a>
