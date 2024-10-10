@@ -1,3 +1,6 @@
+trang mã hóa js: https://obfuscator.io/
+trang mã hóa css:
+
 <!-- Plugin chat  -->
 
 
