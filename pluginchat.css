@@ -1,1 +1,243 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('@L 1m{0%{6:12(.5);v:0}n%{v:1}13{v:0;6:12(1)}}@L 1l{0%,13{6:s(-1h)}n%{6:s(1h)}}.1K-13-X{p:1L}.2-3-y-w-4 1M 1N{1O:#o}.2-3-1P-1Q-4{q:S;p:1R;t:f;z-I:1j}.2-3-b-4,.2-3-15{c-9:0 N U B(0,0,0,.1u),0 V 1k B(0,0,0,.16);c-9:0 0 e F(--G-7)}.2-3-b-4{1J:r;Z:r;8-R:k;7:#o;j:1S(\'1U://1V.1W/1X/1H/1Y/1Z.21\')22-23 k k;j-14:1T;d-x:n%;d:V T F(--G-7);c-9:0 0 e#1I;q:1E;1D:1B;O:Q;R-1i:k;1G-1w:k;g:j 0.D u}.2-3-b-4 i{g:6 0.D u}.2-3-b-4::1b,.2-3-b-4::1F{1w:"";q:1t;d:N T#o;j:F(--G-7);z-I:-1;1C:-f;t:-f;X:-f;p:-f;d-x:n%;P:1m 1.24 1n M}.2-3-b-4::1b{P-26:.2h}.2-3-y-w-4,.2-3-y-w-4 i{g:E 1s}.2-3-y-w-4 i{P:1l 1s 1n M}.2-3-b-4:H.2-3-y-w-4,.2-3-8{v:0}.2-3-b-4:H i{6:12(.5);g:E.D u-W}.2-3-8 a{8-1q:Y;7:#o}.2-3-8{q:1t;X:U;8-6:2m;h-14:2n;h-11:18;6:1d(-1);g:E.D;1e-Z:1.5;7:#C;8-9:0 0 K#C,0 0 e#C,0 0 A#C}.2-3-b-4:H.2-3-8{6:1d(1);v:1}.2-3-15{q:S;p:2o;t:2l;z-I:2p;j:#o;1x:1z 2k 1z A;7:#2q;d-x:r 0 0 r;h-11:18;h-14:A}.2-3-15 19{7:#1y!2r}19#2-3-2t{h-1g:1f;1e-Z:1.5}.2-3-8{h-1g:1f}.l-m-27{O:Y;Q-2i:2j;2g:e;q:S;p:2f;t:f;z-I:1j;1A-p:e}.l-m-2{O:Q;R-1i:k;j:#o;7:#1y;1x:K A;d-x:r;c-9:0 N U B(0,0,0,.1u),0 V 1k B(0,0,0,.16);8-1q:Y;h-11:2b;g:E 0.1r;c-9:0 0 e F(--G-7)}.l-m-2:H{j:#28}.l-m-2 i{1A-t:e}@L 1v{0%,17%{6:s(25)}10%,29%{6:s(-1p)}20%,2a%{6:s(1p)}}.l-m-2 1o{O:2c-2d;P:1v 0.2e u-W-1c M,1a 2s M;g:6 0.1r u-W-1c}@L 1a{0%{c-9:0 0 K#J}n%{c-9:0 0 f#J}17%{c-9:0 0 K#J}}.l-m-2 1o{d-x:n%;d:N T#J}',62,154,'||pluginchat|telegram|nut||transform|color|text|shadow||nen|box|border|10px|20px|transition|font||background|center|contact|option|50|fff|bottom|position|50px|rotate|right|ease|opacity|trong|radius|ben||15px|rgba|3333ff|5s|all|var|primary|hover|index|0066ff|5px|keyframes|infinite|1px|display|animation|flex|align|fixed|solid|6px|2px|in|top|none|height||weight|scale|to|size|mess||100|700|span|borderPulse|after|out|scaleX|line|Roboto|family|25deg|items|999|32px|lucidgentelegram|zoom|linear|img|10deg|decoration|3s||absolute|06|rotateShake|content|padding|000000|7px|margin|pointer|left|cursor|relative|before|justify|userfiles|C0C0C0|width|jscroll|100px|svg|path|fill|vi|tri|24px|url|contain|https|doithe1s|vn|storage|images|zalo||png|no|repeat|9s|0deg|delay|pluginchatt|f0f0f0|30|40|bold|inline|block|7s|80px|gap|4s|direction|column|25px|58px|uppercase|12px|29px|99|3a9140|important||tracking'.split('|'),0,{}))
+  @keyframes zoom {
+        0% {
+            transform: scale(.5);
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+            transform: scale(1);
+        }
+    }
+
+    @keyframes lucidgentelegram {
+
+        0%,
+        to {
+            transform: rotate(-25deg);
+        }
+
+        50% {
+            transform: rotate(25deg);
+        }
+    }
+
+    .jscroll-to-top {
+        bottom: 100px;
+    }
+
+    .pluginchat-telegram-ben-trong-nut svg path {
+        fill: #fff;
+    }
+
+    .pluginchat-telegram-vi-tri-nut {
+        position: fixed;
+        bottom: 24px;
+        right: 20px;
+        z-index: 999;
+    }
+
+    .pluginchat-telegram-nen-nut,
+    .pluginchat-telegram-mess {
+        box-shadow: 0 1px 6px rgba(0, 0, 0, .06), 0 2px 32px rgba(0, 0, 0, .16);
+         box-shadow: 0 0 10px var(--primary-color);
+    }
+
+    .pluginchat-telegram-nen-nut {
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        color: #fff;
+         background: url('https://doithe1s.vn/storage/userfiles/images/zalo.png') no-repeat center center; /* Thay đổi ở đây */
+    background-size: contain; /* Để hình ảnh phủ toàn bộ nút */
+        border-radius: 50%;
+        border: 2px solid var(--primary-color); /* Thay đổi màu viền ở đây */
+        box-shadow: 0 0 10px #C0C0C0;
+        position: relative;
+        cursor: pointer;
+          display: flex; /* Để căn giữa biểu tượng */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    transition: background 0.5s ease; /* Hiệu ứng chuyển tiếp cho nền */
+    }
+
+.pluginchat-telegram-nen-nut i {
+    transition: transform 0.5s ease; /* Hiệu ứng chuyển tiếp cho biểu tượng */
+}
+
+    .pluginchat-telegram-nen-nut::after,
+    .pluginchat-telegram-nen-nut::before {
+        content: "";
+        position: absolute;
+        border: 1px solid #fff;
+        background: var(--primary-color);/* màu phát quang */ 
+        z-index: -1;
+        left: -20px;
+        right: -20px;
+        top: -20px;
+        bottom: -20px;
+        border-radius: 50%;
+        animation: zoom 1.9s linear infinite;
+    }
+
+    .pluginchat-telegram-nen-nut::after {
+        animation-delay: .4s;
+    }
+
+    .pluginchat-telegram-ben-trong-nut,
+    .pluginchat-telegram-ben-trong-nut i {
+        transition: all 1s;
+    }
+
+  
+
+    .pluginchat-telegram-ben-trong-nut i {
+        animation: lucidgentelegram 1s linear infinite;
+    }
+
+    .pluginchat-telegram-nen-nut:hover .pluginchat-telegram-ben-trong-nut,
+    .pluginchat-telegram-text {
+        opacity: 0;
+    }
+
+    .pluginchat-telegram-nen-nut:hover i {
+        transform: scale(.5);
+        transition: all .5s ease-in;
+    }
+
+    .pluginchat-telegram-text a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .pluginchat-telegram-text {
+        position: absolute;
+        top: 6px;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 700;
+        transform: scaleX(-1);
+        transition: all .5s;
+        line-height: 1.5;
+         color: #3333ff; /* Màu chữ mới */
+    text-shadow: 0 0 5px #3333ff, 0 0 10px #3333ff, 0 0 15px #3333ff; /* Hiệu ứng phát quang */
+    }
+
+    .pluginchat-telegram-nen-nut:hover .pluginchat-telegram-text {
+        transform: scaleX(1);
+        opacity: 1;
+        
+    }
+
+    .pluginchat-telegram-mess {
+        position: fixed;
+        bottom: 29px;
+        right: 58px;
+        z-index: 99;
+        background: #fff; /* màu nên text ngoài*/
+        padding: 7px 25px 7px 15px;
+        color: #3a9140;
+        border-radius: 50px 0 0 50px;
+        font-weight: 700;
+        font-size: 15px;
+    }
+
+    .pluginchat-telegram-mess span {
+        color: #000000 !important; /* màu chữ lh ht*/
+    }
+
+    span#pluginchat-telegram-tracking {
+        font-family: Roboto;
+        line-height: 1.5;
+    }
+
+    .pluginchat-telegram-text {
+        font-family: Roboto;
+    }
+
+    /* New styles for the additional buttons */
+    .contact-option-pluginchatt {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: fixed;
+        bottom: 80px;
+        /* Position above the main button */
+        right: 20px;
+        z-index: 999;
+        margin-bottom: 10px;
+    }
+
+    .contact-option-pluginchat {
+        display: flex;
+        align-items: center;
+        background: #fff;
+        
+        color: #000000; /* màu chữ khi nhấn vào trong nút*/
+        padding: 5px 15px;
+        border-radius: 50px;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, .06), 0 2px 32px rgba(0, 0, 0, .16);
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s;
+        box-shadow: 0 0 10px var(--primary-color);
+    }
+
+    .contact-option-pluginchat:hover {
+        background: #f0f0f0;
+        
+    }
+
+    .contact-option-pluginchat i {
+        margin-right: 10px;
+        
+    }
+
+    @keyframes rotateShake {
+
+        0%,
+        100% {
+            transform: rotate(0deg);
+        }
+
+        10%,
+        30% {
+            transform: rotate(-10deg);
+        }
+
+        20%,
+        40% {
+            transform: rotate(10deg);
+        }
+    }
+
+    .contact-option-pluginchat img {
+        display: inline-block;
+        animation: rotateShake 0.7s ease-in-out infinite, borderPulse 2s infinite;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    @keyframes borderPulse {
+        0% {
+            box-shadow: 0 0 5px #0066ff;
+        }
+
+        50% {
+            box-shadow: 0 0 20px #0066ff;
+        }
+
+        100% {
+            box-shadow: 0 0 5px #0066ff;
+        }
+    }
+
+    .contact-option-pluginchat img {
+        border-radius: 50%;
+        border: 1px solid #0066ff;
+    }
+    
+    
