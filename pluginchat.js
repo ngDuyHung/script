@@ -1,1 +1,280 @@
-function _0x5b39(_0x592ffe,_0x5eb66e){const _0x3c2316=_0x3c23();return _0x5b39=function(_0x5b398d,_0x378d42){_0x5b398d=_0x5b398d-0x1da;let _0x131b13=_0x3c2316[_0x5b398d];return _0x131b13;},_0x5b39(_0x592ffe,_0x5eb66e);}(function(_0x59c4d2,_0x5e1018){const _0x48e15c=_0x5b39,_0x533bcd=_0x59c4d2();while(!![]){try{const _0x41e7a3=parseInt(_0x48e15c(0x1f8))/0x1+parseInt(_0x48e15c(0x1e0))/0x2+-parseInt(_0x48e15c(0x1e8))/0x3*(parseInt(_0x48e15c(0x1e9))/0x4)+-parseInt(_0x48e15c(0x1eb))/0x5*(parseInt(_0x48e15c(0x1e6))/0x6)+-parseInt(_0x48e15c(0x1ed))/0x7+parseInt(_0x48e15c(0x1de))/0x8*(parseInt(_0x48e15c(0x1ec))/0x9)+-parseInt(_0x48e15c(0x1f2))/0xa*(-parseInt(_0x48e15c(0x1dd))/0xb);if(_0x41e7a3===_0x5e1018)break;else _0x533bcd['push'](_0x533bcd['shift']());}catch(_0x6e9918){_0x533bcd['push'](_0x533bcd['shift']());}}}(_0x3c23,0x5f351));const _0x5d4e80=_0x31d9;(function(_0x178136,_0x790c2f){const _0x2469e3=_0x5b39,_0x274d54=_0x31d9,_0x3eed5a=_0x178136();while(!![]){try{const _0x849c22=-parseInt(_0x274d54(0xa6))/0x1*(-parseInt(_0x274d54(0x99))/0x2)+parseInt(_0x274d54(0x9b))/0x3+-parseInt(_0x274d54(0x9e))/0x4*(-parseInt(_0x274d54(0xa9))/0x5)+-parseInt(_0x274d54(0xa4))/0x6*(parseInt(_0x274d54(0xa5))/0x7)+parseInt(_0x274d54(0x97))/0x8*(-parseInt(_0x274d54(0x9d))/0x9)+parseInt(_0x274d54(0xab))/0xa+-parseInt(_0x274d54(0xa2))/0xb*(parseInt(_0x274d54(0x9f))/0xc);if(_0x849c22===_0x790c2f)break;else _0x3eed5a['push'](_0x3eed5a['shift']());}catch(_0x187418){_0x3eed5a['push'](_0x3eed5a[_0x2469e3(0x1dc)]());}}}(_0x438c,0x5b348));function _0x31d9(_0x5c8490,_0x112d6e){const _0x47450e=_0x438c();return _0x31d9=function(_0x2dbcd8,_0x1c4eaa){_0x2dbcd8=_0x2dbcd8-0x97;let _0x52e734=_0x47450e[_0x2dbcd8];return _0x52e734;},_0x31d9(_0x5c8490,_0x112d6e);}function toggleOptions(){const _0x21f489=_0x5b39,_0x55fa1e=_0x31d9,_0x12b600=document[_0x55fa1e(0xaa)](_0x55fa1e(0xa7));_0x12b600[_0x55fa1e(0xa1)][_0x21f489(0x1e5)]=_0x12b600[_0x55fa1e(0xa1)][_0x55fa1e(0xa0)]===_0x55fa1e(0x98)?'none':_0x55fa1e(0x98);}function _0x3c23(){const _0x52b498=['flex','https://i.imgur.com/aeeTsjp.png','getElementById','496307MlTwlI','1761852leNTRc','552553jFdPiv','612432jRrNsJ','35PMylAx','shift','77GvRxKv','48xVOzlM','https://i.imgur.com/hxLmCcD.jpeg','355682JwxMGK','url(\x27','length','6896UJrtys','42aAAgGW','display','642unsRTf','2318740sguwsn','581421CpwlIy','12acUTlq','3573NQNFQY','1865FsjfTb','376524MTCdYh','4221735cIDhfc','dynamicButton','6GrIFzp','168178ZtGbXY','322964sOBtro','904280NSrtAg'];_0x3c23=function(){return _0x52b498;};return _0x3c23();}const images=[_0x5d4e80(0x9a),'https://i.imgur.com/XE60rrO.png',_0x5d4e80(0xa3)];let currentIndex=0x0;function changeImage(){const _0xde6994=_0x5b39,_0x44861f=_0x5d4e80,_0x268c43=document[_0xde6994(0x1f5)](_0xde6994(0x1ee));_0x268c43[_0x44861f(0xa1)][_0x44861f(0xa8)]=_0xde6994(0x1e1)+images[currentIndex]+'\x27)',currentIndex=(currentIndex+0x1)%images[_0x44861f(0x9c)];}setInterval(changeImage,0x3e8),changeImage();function _0x438c(){const _0x36f7ce=_0x5b39,_0x49d115=[_0x36f7ce(0x1e5),'style','22EGOzEf',_0x36f7ce(0x1f4),_0x36f7ce(0x1e4),_0x36f7ce(0x1f6),_0x36f7ce(0x1ef),'contactOptions','backgroundImage',_0x36f7ce(0x1db),_0x36f7ce(0x1f5),_0x36f7ce(0x1e7),_0x36f7ce(0x1e3),_0x36f7ce(0x1f3),_0x36f7ce(0x1f0),_0x36f7ce(0x1df),_0x36f7ce(0x1da),_0x36f7ce(0x1e2),_0x36f7ce(0x1ea),_0x36f7ce(0x1f1),_0x36f7ce(0x1f7)];return _0x438c=function(){return _0x49d115;},_0x438c();}
+
+const styleContent = ` 
+
+
+    @keyframes zoom {
+        0% {
+            transform: scale(.5);
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+            transform: scale(1);
+        }
+    }
+
+    @keyframes lucidgentelegram {
+
+        0%,
+        to {
+            transform: rotate(-25deg);
+        }
+
+        50% {
+            transform: rotate(25deg);
+        }
+    }
+
+    .jscroll-to-top {
+        bottom: 100px;
+    }
+
+    .pluginchat-telegram-ben-trong-nut svg path {
+        fill: #fff;
+    }
+
+    .pluginchat-telegram-vi-tri-nut {
+        position: fixed;
+        bottom: 24px;
+        right: 20px;
+        z-index: 999;
+    }
+
+    .pluginchat-telegram-nen-nut,
+    .pluginchat-telegram-mess {
+        box-shadow: 0 1px 6px rgba(0, 0, 0, .06), 0 2px 32px rgba(0, 0, 0, .16);
+         box-shadow: 0 0 10px var(--primary-color);
+    }
+
+    .pluginchat-telegram-nen-nut {
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        color: #fff;
+         background: url('https://doithe1s.vn/storage/userfiles/images/zalo.png') no-repeat center center; /* Thay đổi ở đây */
+    background-size: contain; /* Để hình ảnh phủ toàn bộ nút */
+        border-radius: 50%;
+        border: 2px solid var(--primary-color); /* Thay đổi màu viền ở đây */
+        box-shadow: 0 0 10px #C0C0C0;
+        position: relative;
+        cursor: pointer;
+          display: flex; /* Để căn giữa biểu tượng */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    transition: background 0.5s ease; /* Hiệu ứng chuyển tiếp cho nền */
+    }
+
+.pluginchat-telegram-nen-nut i {
+    transition: transform 0.5s ease; /* Hiệu ứng chuyển tiếp cho biểu tượng */
+}
+
+    .pluginchat-telegram-nen-nut::after,
+    .pluginchat-telegram-nen-nut::before {
+        content: "";
+        position: absolute;
+        border: 1px solid #fff;
+        background: var(--primary-color);/* màu phát quang */ 
+        z-index: -1;
+        left: -20px;
+        right: -20px;
+        top: -20px;
+        bottom: -20px;
+        border-radius: 50%;
+        animation: zoom 1.9s linear infinite;
+    }
+
+    .pluginchat-telegram-nen-nut::after {
+        animation-delay: .4s;
+    }
+
+    .pluginchat-telegram-ben-trong-nut,
+    .pluginchat-telegram-ben-trong-nut i {
+        transition: all 1s;
+    }
+
+  
+
+    .pluginchat-telegram-ben-trong-nut i {
+        animation: lucidgentelegram 1s linear infinite;
+    }
+
+    .pluginchat-telegram-nen-nut:hover .pluginchat-telegram-ben-trong-nut,
+    .pluginchat-telegram-text {
+        opacity: 0;
+    }
+
+    .pluginchat-telegram-nen-nut:hover i {
+        transform: scale(.5);
+        transition: all .5s ease-in;
+    }
+
+    .pluginchat-telegram-text a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .pluginchat-telegram-text {
+        position: absolute;
+        top: 6px;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 700;
+        transform: scaleX(-1);
+        transition: all .5s;
+        line-height: 1.5;
+         color: #3333ff; /* Màu chữ mới */
+    text-shadow: 0 0 5px #3333ff, 0 0 10px #3333ff, 0 0 15px #3333ff; /* Hiệu ứng phát quang */
+    }
+
+    .pluginchat-telegram-nen-nut:hover .pluginchat-telegram-text {
+        transform: scaleX(1);
+        opacity: 1;
+        
+    }
+
+    .pluginchat-telegram-mess {
+        position: fixed;
+        bottom: 29px;
+        right: 58px;
+        z-index: 99;
+        background: #fff; /* màu nên text ngoài*/
+        padding: 7px 25px 7px 15px;
+        color: #3a9140;
+        border-radius: 50px 0 0 50px;
+        font-weight: 700;
+        font-size: 15px;
+    }
+
+    .pluginchat-telegram-mess span {
+        color: #000000 !important; /* màu chữ lh ht*/
+    }
+
+    span#pluginchat-telegram-tracking {
+        font-family: Roboto;
+        line-height: 1.5;
+    }
+
+    .pluginchat-telegram-text {
+        font-family: Roboto;
+    }
+
+    /* New styles for the additional buttons */
+    .contact-option-pluginchatt {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: fixed;
+        bottom: 80px;
+        /* Position above the main button */
+        right: 20px;
+        z-index: 999;
+        margin-bottom: 10px;
+    }
+
+    .contact-option-pluginchat {
+        display: flex;
+        align-items: center;
+        background: #fff;
+        
+        color: #000000; /* màu chữ khi nhấn vào trong nút*/
+        padding: 5px 15px;
+        border-radius: 50px;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, .06), 0 2px 32px rgba(0, 0, 0, .16);
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s;
+        box-shadow: 0 0 10px var(--primary-color);
+    }
+
+    .contact-option-pluginchat:hover {
+        background: #f0f0f0;
+        
+    }
+
+    .contact-option-pluginchat i {
+        margin-right: 10px;
+        
+    }
+
+    @keyframes rotateShake {
+
+        0%,
+        100% {
+            transform: rotate(0deg);
+        }
+
+        10%,
+        30% {
+            transform: rotate(-10deg);
+        }
+
+        20%,
+        40% {
+            transform: rotate(10deg);
+        }
+    }
+
+    .contact-option-pluginchat img {
+        display: inline-block;
+        animation: rotateShake 0.7s ease-in-out infinite, borderPulse 2s infinite;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    @keyframes borderPulse {
+        0% {
+            box-shadow: 0 0 5px #0066ff;
+        }
+
+        50% {
+            box-shadow: 0 0 20px #0066ff;
+        }
+
+        100% {
+            box-shadow: 0 0 5px #0066ff;
+        }
+    }
+
+    .contact-option-pluginchat img {
+        border-radius: 50%;
+        border: 1px solid #0066ff;
+    }
+    
+    `;
+
+  // Tạo thẻ <style> và thêm CSS vào trang
+const styleElement = document.createElement('style');
+styleElement.textContent = styleContent;
+document.head.appendChild(styleElement);
+
+  function toggleOptions() {
+        const options = document.getElementById('contactOptions');
+        options.style.display = options.style.display === 'flex' ? 'none' : 'flex';
+    }
+    
+
+
+    const images = [
+        'https://i.imgur.com/hxLmCcD.jpeg', // Đường dẫn hình ảnh 1
+        'https://i.imgur.com/XE60rrO.png', // Đường dẫn hình ảnh 2
+        'https://i.imgur.com/aeeTsjp.png'  // Đường dẫn hình ảnh 3
+    ];
+
+    let currentIndex = 0;
+
+    function changeImage() {
+        const button = document.getElementById('dynamicButton');
+        button.style.backgroundImage = `url('${images[currentIndex]}')`;
+        
+        currentIndex = (currentIndex + 1) % images.length; // Chuyển đổi chỉ số
+    }
+
+    // Thay đổi hình ảnh mỗi 1 giây
+    setInterval(changeImage, 1000);
+    
+    // Gọi hàm một lần để đặt hình ảnh ban đầu
+    changeImage();
