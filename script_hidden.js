@@ -7,7 +7,8 @@ var _0x15d966=_0x4e48;(function(_0x41f1c0,_0x23a6d0){var _0x21ab4a=_0x4e48,_0xca
     
 
     
-        document.querySelectorAll("table.table-module tbody").forEach(tbody => {
+        document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll("table.table-bordered.table-striped.table-module tbody").forEach(tbody => {
             let anyRowsVisible = false;
 
             // Duyệt qua tất cả các hàng trong bảng
@@ -24,7 +25,7 @@ var _0x15d966=_0x4e48;(function(_0x41f1c0,_0x23a6d0){var _0x21ab4a=_0x4e48,_0xca
                 const newRowHTML = `
                     <tr class="notification-row">
                         <td colspan="10">
-                            <div class="text-xs-nowrap text-center font-weight-bold text-danger doithecao24hvn">Vui lòng đăng nhập để xem chiết khấu</div>
+                            <div class="text-xs-nowrap text-center font-weight-bold text-danger doithe1svn">Vui lòng đăng nhập để xem chiết khấu</div>
                         </td>
                     </tr>
                 `;
@@ -34,6 +35,7 @@ var _0x15d966=_0x4e48;(function(_0x41f1c0,_0x23a6d0){var _0x21ab4a=_0x4e48,_0xca
                 tbody.querySelector('tr.notification-row').style.display = "table-row";
             }
         });
+    });
    
 
 
