@@ -3,7 +3,7 @@ var _0x15d966=_0x4e48;(function(_0x41f1c0,_0x23a6d0){var _0x21ab4a=_0x4e48,_0xca
 
 
 
-    document.addEventListener("DOMContentLoaded", function () {
+   
         // Duyệt qua tất cả các bảng
         document.querySelectorAll("table.table-module tbody").forEach(tbody => {
             let allRowsHidden = true;
@@ -30,6 +30,6 @@ var _0x15d966=_0x4e48;(function(_0x41f1c0,_0x23a6d0){var _0x21ab4a=_0x4e48,_0xca
                 tbody.insertAdjacentHTML('beforeend', newRowHTML);
             }
         });
-    });
+  
 
 
