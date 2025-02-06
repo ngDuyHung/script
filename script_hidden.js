@@ -6,7 +6,7 @@ var _0x15d966=_0x4e48;(function(_0x41f1c0,_0x23a6d0){var _0x21ab4a=_0x4e48,_0xca
    
     
 
-     document.addEventListener("DOMContentLoaded", function () {
+    
         document.querySelectorAll("table.table-module tbody").forEach(tbody => {
             let anyRowsVisible = false;
 
@@ -34,7 +34,7 @@ var _0x15d966=_0x4e48;(function(_0x41f1c0,_0x23a6d0){var _0x21ab4a=_0x4e48,_0xca
                 tbody.querySelector('tr.notification-row').style.display = "table-row";
             }
         });
-    });
+   
 
 
 
