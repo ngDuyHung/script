@@ -1,4 +1,4 @@
-
+<script>
 document.addEventListener("DOMContentLoaded", function () {
     (async function () {
         async function checkDomainAllowed(currentUrl) {
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const currentUrl = window.location.href;
         const isAllowed = await checkDomainAllowed(currentUrl);
-        if (isAllowed) {
+        if (!isAllowed) {
             return;
         }
 
@@ -52,5 +52,25 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
+        // Ẩn các thông báo `.sn-notify` khi trang load
+        const notifications = document.querySelectorAll('.sn-notify');
+        notifications.forEach(function(notification) {
+            notification.style.display = 'none';
+        });
+
+        // Theo dõi và ẩn các thông báo mới được thêm vào
+        new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.addedNodes.length > 0) {
+                    mutation.addedNodes.forEach(function(node) {
+                        if (node.classList && node.classList.contains('sn-notify')) {
+                            node.style.display = 'none';
+                        }
+                    });
+                }
+            });
+        }).observe(document.body, { childList: true, subtree: true });
+
     })();
 });
+</script>
