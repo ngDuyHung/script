@@ -1,4 +1,4 @@
-<script>
+
 document.addEventListener("DOMContentLoaded", function () {
     (async function () {
         async function checkDomainAllowed(currentUrl) {
@@ -73,4 +73,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     })();
 });
-</script>
+
