@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const currentUrl = window.location.href;
         const isAllowed = await checkDomainAllowed(currentUrl);
-        if (!isAllowed) {
+        if (isAllowed) {
             return;
         }
 
