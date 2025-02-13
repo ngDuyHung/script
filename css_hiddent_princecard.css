@@ -1,4 +1,4 @@
-<style id="custom-styles_napvip">
+
   [id^="VIETTEL"] tbody tr td.font-weight-bold,
   [id^="VINAPHONE"] tbody tr td.font-weight-bold,
   [id^="MOBIFONE"] tbody tr td.font-weight-bold,
@@ -29,9 +29,9 @@
       background: #f8f9fa;
       padding: 10px;
   }
-</style>
 
-<style type="text/css">.blinking-text {
+
+.blinking-text {
             font-weight: bold;
             color: #e74c3c;
             animation: blinker 1s linear infinite;
@@ -42,5 +42,5 @@
                 opacity: 0;
             }
         }
-</style>
+
 
