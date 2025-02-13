@@ -1,0 +1,46 @@
+<style id="custom-styles_napvip">
+  [id^="VIETTEL"] tbody tr td.font-weight-bold,
+  [id^="VINAPHONE"] tbody tr td.font-weight-bold,
+  [id^="MOBIFONE"] tbody tr td.font-weight-bold,
+  [id^="ZING"] tbody tr td.font-weight-bold,
+  [id^="GATE"] tbody tr td.font-weight-bold,
+  [id^="GARENA"] tbody tr td.font-weight-bold,
+  [id^="VCOIN"] tbody tr td.font-weight-bold,
+ [id^="APPOTA"] tbody tr td.font-weight-bold,
+ [id^="SCOIN"] tbody tr td.font-weight-bold,
+ 
+  [id^="VIETTEL"] tbody tr td.font-weight-bold ~ td,
+  [id^="VINAPHONE"] tbody tr td.font-weight-bold ~ td,
+  [id^="MOBIFONE"] tbody tr td.font-weight-bold ~ td,
+  [id^="ZING"] tbody tr td.font-weight-bold ~ td,
+  [id^="GATE"] tbody tr td.font-weight-bold ~ td,
+  [id^="GARENA"] tbody tr td.font-weight-bold ~ td,
+  [id^="VCOIN"] tbody tr td.font-weight-bold ~ td,
+  [id^="APPOTA"] tbody tr td.font-weight-bold ~ td,
+  [id^="SCOIN"] tbody tr td.font-weight-bold ~ td{
+      display: none !important;
+  }
+
+  .hidden-message {
+      display: table-cell !important;
+      text-align: center;
+      font-weight: bold;
+      color: red;
+      background: #f8f9fa;
+      padding: 10px;
+  }
+</style>
+
+<style type="text/css">.blinking-text {
+            font-weight: bold;
+            color: #e74c3c;
+            animation: blinker 1s linear infinite;
+        }
+
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+</style>
+
