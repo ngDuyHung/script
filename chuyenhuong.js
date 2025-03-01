@@ -1,1 +1,1 @@
-window.location.href = "https://napvip.vn/";
+//window.location.href = "https://napvip.vn/";
