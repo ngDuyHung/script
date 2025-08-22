@@ -3,5 +3,6 @@
   "update_link": "https://stu.edu.vn/dang-ky-mon-hoc",
   "enabled_mess": true,
   "enabled_update": false,
-  "enabled_key": false
+  "noti_key": "Chưa có key truy cập web duyhung.io.vn để lấy.",
+  "enabled_key": true
 }
