@@ -130,7 +130,7 @@
         .livechatvn-livechat-menu.open { transform: scale(1); }
 
         .livechatvn-livechat-menu .menu-header {
-            background: #28a745;
+            background: #0066ff;
             color: #fff;
             padding: 12px 15px;
             border-radius: 7px 7px 0 0;
@@ -144,7 +144,7 @@
             transform: translateY(-50%);
             width: 26px;
             height: 26px;
-            background: #28a745;
+            background: #0066ff;
             border-radius: 50%;
             display: flex;
             align-items: center;
