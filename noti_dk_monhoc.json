@@ -2,7 +2,7 @@
   "message": "Tool được tạo ra nhằm phục vụ cho việc học tập, đăng ký môn học stu tiện lợi dễ dàng - góp ý, báo lỗi liên hệ qtv.",
   "update_link": "https://stu.edu.vn/dang-ky-mon-hoc",
   "enabled_mess": true,
-  "enabled_update": false,
+  "enabled_update": true,
   "noti_key": "Chưa có key truy cập web duyhung.io.vn để lấy.",
   "enabled_key": true
 }
